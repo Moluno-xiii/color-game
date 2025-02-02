@@ -1,5 +1,11 @@
+import Colors from "./components/Colors";
+
 function App() {
-  return <div className="bg-orange-500">Color game</div>;
+  return (
+    <div className="py-5">
+      <Colors />
+    </div>
+  );
 }
 
 export default App;

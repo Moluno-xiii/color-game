@@ -1,0 +1,7 @@
+define an array of colors with similar colors. [convert tailwind colors to hex, and put them in an array, e.g gray-100 to gray-900].
+pick an array at random, and pick a color from it at random.
+display the remaining unpicked colors as options.
+if the user picks wrong, display a propmt, and do the same thing if they pick right.
+update scores.
+add a button to go to another level, or use a timeout when the user's value is equal to the random color.
+add button to reset the game.
