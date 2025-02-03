@@ -24,9 +24,9 @@ const colorsWithVariants = [
   {
     name: "teal",
     variants: [
-      "#CCFBF1",
-      "#99F6E4",
-      "#5EEAD4",
+      // "#CCFBF1",
+      // "#99F6E4",
+      // "#5EEAD4",
       "#2DD4BF",
       "#14B8A6",
       "#0D9488",
@@ -38,9 +38,9 @@ const colorsWithVariants = [
   {
     name: "gray",
     variants: [
-      "#F3F4F6",
-      "#E5E7EB",
-      "#D1D5DB",
+      // "#F3F4F6",
+      // "#E5E7EB",
+      // "#D1D5DB",
       "#9CA3AF",
       "#6B7280",
       "#4B5563",
@@ -52,9 +52,9 @@ const colorsWithVariants = [
   {
     name: "red",
     variants: [
-      "#FEE2E2",
-      "#FECACA",
-      "#FCA5A5",
+      // "#FEE2E2",
+      // "#FECACA",
+      // "#FCA5A5",
       "#F87171",
       "#EF4444",
       "#DC2626",
@@ -66,9 +66,9 @@ const colorsWithVariants = [
   {
     name: "yellow",
     variants: [
-      "#FEF9C3",
-      "#FEF08A",
-      "#FDE047",
+      // "#FEF9C3",
+      // "#FEF08A",
+      // "#FDE047",
       "#FACC15",
       "#EAB308",
       "#CA8A04",
@@ -80,9 +80,9 @@ const colorsWithVariants = [
   {
     name: "green",
     variants: [
-      "#DCFCE7",
-      "#BBF7D0",
-      "#86EFAC",
+      // "#DCFCE7",
+      // "#BBF7D0",
+      // "#86EFAC",
       "#4ADE80",
       "#22C55E",
       "#16A34A",
@@ -94,9 +94,9 @@ const colorsWithVariants = [
   {
     name: "blue",
     variants: [
-      "#DBEAFE",
-      "#BFDBFE",
-      "#93C5FD",
+      // "#DBEAFE",
+      // "#BFDBFE",
+      // "#93C5FD",
       "#60A5FA",
       "#3B82F6",
       "#2563EB",
@@ -108,9 +108,9 @@ const colorsWithVariants = [
   {
     name: "purple",
     variants: [
-      "#EDE9FE",
-      "#DDD6FE",
-      "#C4B5FD",
+      // "#EDE9FE",
+      // "#DDD6FE",
+      // "#C4B5FD",
       "#A78BFA",
       "#8B5CF6",
       "#7C3AED",
@@ -122,9 +122,9 @@ const colorsWithVariants = [
   {
     name: "pink",
     variants: [
-      "#FCE7F3",
-      "#FBCFE8",
-      "#F9A8D4",
+      // "#FCE7F3",
+      // "#FBCFE8",
+      // "#F9A8D4",
       "#F472B6",
       "#EC4899",
       "#DB2777",
@@ -136,9 +136,9 @@ const colorsWithVariants = [
   {
     name: "violet",
     variants: [
-      "#EDE9FE",
-      "#DDD6FE",
-      "#C4B5FD",
+      // "#EDE9FE",
+      // "#DDD6FE",
+      // "#C4B5FD",
       "#A78BFA",
       "#8B5CF6",
       "#7C3AED",
@@ -150,9 +150,9 @@ const colorsWithVariants = [
   {
     name: "amber",
     variants: [
-      "#FEF3C7",
-      "#FDE68A",
-      "#FCD34D",
+      // "#FEF3C7",
+      // "#FDE68A",
+      // "#FCD34D",
       "#FBBF24",
       "#F59E0B",
       "#D97706",
@@ -164,9 +164,9 @@ const colorsWithVariants = [
   {
     name: "lime",
     variants: [
-      "#ECFCCB",
-      "#D9F99D",
-      "#BEF264",
+      // "#ECFCCB",
+      // "#D9F99D",
+      // "#BEF264",
       "#A3E635",
       "#84CC16",
       "#65A30D",
@@ -178,9 +178,9 @@ const colorsWithVariants = [
   {
     name: "emerald",
     variants: [
-      "#D1FAE5",
-      "#A7F3D0",
-      "#6EE7B7",
+      // "#D1FAE5",
+      // "#A7F3D0",
+      // "#6EE7B7",
       "#34D399",
       "#10B981",
       "#059669",
@@ -192,9 +192,9 @@ const colorsWithVariants = [
   {
     name: "indigo",
     variants: [
-      "#E0E7FF",
-      "#C7D2FE",
-      "#A5B4FC",
+      // "#E0E7FF",
+      // "#C7D2FE",
+      // "#A5B4FC",
       "#818CF8",
       "#6366F1",
       "#4F46E5",
@@ -206,9 +206,9 @@ const colorsWithVariants = [
   {
     name: "fuchsia",
     variants: [
-      "#FAE8FF",
-      "#F5D0FE",
-      "#F0ABFC",
+      // "#FAE8FF",
+      // "#F5D0FE",
+      // "#F0ABFC",
       "#E879F9",
       "#D946EF",
       "#C026D3",
@@ -220,9 +220,9 @@ const colorsWithVariants = [
   {
     name: "rose",
     variants: [
-      "#FFE4E6",
-      "#FECDD3",
-      "#FDA4AF",
+      // "#FFE4E6",
+      // "#FECDD3",
+      // "#FDA4AF",
       "#FB7185",
       "#F43F5E",
       "#E11D48",
@@ -234,9 +234,9 @@ const colorsWithVariants = [
   {
     name: "slate",
     variants: [
-      "#F1F5F9",
-      "#E2E8F0",
-      "#CBD5E1",
+      // "#F1F5F9",
+      // "#E2E8F0",
+      // "#CBD5E1",
       "#94A3B8",
       "#64748B",
       "#475569",
@@ -248,9 +248,9 @@ const colorsWithVariants = [
   {
     name: "zinc",
     variants: [
-      "#FAFAFA",
-      "#F4F4F5",
-      "#E4E4E7",
+      // "#FAFAFA",
+      // "#F4F4F5",
+      // "#E4E4E7",
       "#D4D4D8",
       "#A1A1AA",
       "#71717A",
@@ -262,9 +262,9 @@ const colorsWithVariants = [
   {
     name: "neutral",
     variants: [
-      "#F5F5F5",
-      "#E5E5E5",
-      "#D4D4D4",
+      // "#F5F5F5",
+      // "#E5E5E5",
+      // "#D4D4D4",
       "#A3A3A3",
       "#737373",
       "#525252",
@@ -276,9 +276,9 @@ const colorsWithVariants = [
   {
     name: "stone",
     variants: [
-      "#FAF5F0",
-      "#F5EDE6",
-      "#E7D9CC",
+      // "#FAF5F0",
+      // "#F5EDE6",
+      // "#E7D9CC",
       "#D0BBA3",
       "#B8997D",
       "#927056",

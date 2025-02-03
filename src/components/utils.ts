@@ -10,6 +10,6 @@ const getRandomColorObj = () => {
 };
 
 const getRandomColor = (obj: { variants: string[] }) => {
-  return obj.variants[getRandomNum(0, 8)];
+  return obj.variants[getRandomNum(0, 5)];
 };
 export { getRandomNum, getRandomColor, getRandomColorObj };

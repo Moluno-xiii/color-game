@@ -1,4 +1,4 @@
-import Colors from "./components/Colors";
+import ColorGame from "./components/ColorGame";
 
 function App() {
   return (
@@ -6,7 +6,7 @@ function App() {
       <p className="capitalize italic font-semibold text-4xl">
         Color guessing game
       </p>
-      <Colors />
+      <ColorGame />
     </div>
   );
 }
