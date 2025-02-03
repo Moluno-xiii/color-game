@@ -2,7 +2,10 @@ import Colors from "./components/Colors";
 
 function App() {
   return (
-    <div className="py-5">
+    <div className="max-w-4xl mx-auto flex justify-center items-center min-h-dvh py-3 md:py-10 px-2 md:px-4 gap-y-5 flex-col">
+      <p className="capitalize italic font-semibold text-4xl">
+        Color guessing game
+      </p>
       <Colors />
     </div>
   );
