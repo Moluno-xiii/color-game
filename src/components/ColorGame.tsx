@@ -12,6 +12,8 @@ const initialState = {
   userScore: 0,
   isUserOptionRight: "",
   userColor: "",
+  level: 1,
+  newGame: false,
 };
 
 type Actions =
@@ -22,7 +24,7 @@ type Actions =
 const reducer = (state: typeof initialState, action: Actions) => {
   switch (action.type) {
     case "NEW_GAME":
-      return { ...initialState };
+      return { ...initialState, newGame: true };
     case "NEXT_LEVEL": {
       const newColorObject = getRandomColorArray();
       return {
@@ -30,6 +32,7 @@ const reducer = (state: typeof initialState, action: Actions) => {
         randomColorArray: newColorObject,
         randomColor: getRandomColor(newColorObject),
         userColor: "",
+        newGame: false,
       };
     }
     case "USER_GUESS": {
@@ -40,6 +43,8 @@ const reducer = (state: typeof initialState, action: Actions) => {
         ...state,
         userColor: guessedColor,
         userScore: isGuessCorrect ? state.userScore + 1 : state.userScore,
+        level: isGuessCorrect ? state.level + 1 : state.level,
+        newGame: false,
       };
     }
     default:
@@ -48,8 +53,10 @@ const reducer = (state: typeof initialState, action: Actions) => {
 };
 
 const ColorGame: React.FC = () => {
-  const [{ userColor, userScore, randomColor, randomColorArray }, dispatch] =
-    useReducer(reducer, initialState);
+  const [
+    { userColor, userScore, randomColor, randomColorArray, level, newGame },
+    dispatch,
+  ] = useReducer(reducer, initialState);
 
   const handleUserGuess = (color: string) => {
     dispatch({ type: "USER_GUESS", payload: color });
@@ -60,10 +67,11 @@ const ColorGame: React.FC = () => {
   };
 
   useEffect(() => {
+    if (!level || newGame) return;
     setTimeout(() => {
       dispatch({ type: "NEXT_LEVEL" });
     }, 1000);
-  }, [userScore]);
+  }, [level]);
 
   return (
     <div className="colorGameContainer">
