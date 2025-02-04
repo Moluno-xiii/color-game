@@ -5,11 +5,11 @@ const getRandomNum = (min: number, max: number) => {
   return randomNum;
 };
 
-const getRandomColorObj = () => {
+const getRandomColorArray = () => {
   return colorsWithVariants[getRandomNum(0, 18)];
 };
 
 const getRandomColor = (obj: { variants: string[] }) => {
   return obj.variants[getRandomNum(0, 5)];
 };
-export { getRandomNum, getRandomColor, getRandomColorObj };
+export { getRandomNum, getRandomColor, getRandomColorArray };

@@ -12,10 +12,10 @@ const CTAButtons: React.FC<Props> = ({
   randomColor,
 }) => {
   return (
-    <div className="flex text-[#4b4747e9] flex-row justify-between w-full items-center ">
+    <div className="cta-container ">
       <button
         data-testid="newGameButton"
-        className="bg-white px-4 py-2 hover:bg-white/85 transition-all duration-300 rounded-md"
+        className="cta-button"
         onClick={() => handleNewGame()}
       >
         New game
@@ -23,7 +23,7 @@ const CTAButtons: React.FC<Props> = ({
       {userColor === randomColor && (
         <button
           data-testid="nextLevelButton"
-          className="bg-white px-4 py-2 hover:bg-white/85 transition-all duration-300 rounded-md"
+          className="cta-button"
           onClick={() => handleNextLevel()}
         >
           Next level

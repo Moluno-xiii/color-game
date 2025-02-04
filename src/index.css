@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -49,4 +47,109 @@
 
 .animate-celebrate {
   animation: celebrate 1s ease-in-out forwards;
+}
+
+.app {
+  max-width: 896px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  padding: 0.75rem 0.5rem;
+  row-gap: 20px;
+}
+
+.app-title {
+  text-transform: capitalize;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 36px;
+}
+
+.game-status {
+  font-weight: 900;
+  font-size: 24px;
+  transition: all;
+  transition-duration: 500ms;
+}
+
+.cta-container {
+  display: flex;
+  flex-direction: row;
+  color: #4b4747e9;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.cta-button {
+  background-color: white;
+  padding: 8px 16px;
+  transition: all;
+  transition-duration: 300ms;
+  border-radius: 6px;
+  border-width: 1px;
+  color: #4b4747e9;
+
+  &:hover {
+    background-color: white;
+    opacity: 85%;
+  }
+}
+
+.color-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.color-grid-button {
+  border: white 1px solid;
+  border-radius: 8px;
+  text-transform: capitalize;
+  padding: 24px 48px;
+  transition: all;
+  transition-duration: 200ms;
+
+  &:hover {
+    scale: 1.1;
+  }
+}
+
+.colorBox {
+  width: 8rem;
+  height: 8rem;
+}
+
+.gameInstructions {
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+
+.colorGameContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 28px;
+}
+
+@media (width >= 40rem) {
+  .color-grid-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+  }
+  .colorBox {
+    width: 16rem;
+    height: 16rem;
+  }
+  .gameInstructions {
+    font-size: 24px;
+  }
+  .app {
+    padding: 2.5rem 1rem;
+  }
 }

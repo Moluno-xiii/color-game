@@ -6,10 +6,10 @@ interface Props {
 const GameStatus: React.FC<Props> = ({ userColor, randomColor }) => {
   return (
     <span
-      key={userColor}
+      key={Date.now()}
       style={{ color: "white" }}
       className={`
-font-bold text-2xl transition-all duration-500
+game-status
 ${userColor === randomColor ? "animate-celebrate" : "animate-fade-out"}
 `}
       data-testid="gameStatus"

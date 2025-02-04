@@ -1,14 +1,14 @@
 import { useReducer } from "react";
-import { getRandomColor, getRandomColorObj } from "./utils";
+import { getRandomColor, getRandomColorArray } from "./utils";
 import CTAButtons from "./CTAButtons";
 import GameStatus from "./GameStatus";
 import ColorGrid from "./ColorGrid";
 
-const randomColorObject = getRandomColorObj();
+const randomColorArray = getRandomColorArray();
 
 const initialState = {
-  randomColorObject,
-  randomColor: getRandomColor(randomColorObject),
+  randomColorArray,
+  randomColor: getRandomColor(randomColorArray),
   userScore: 0,
   isUserOptionRight: "",
   userColor: "",
@@ -24,10 +24,10 @@ const reducer = (state: typeof initialState, action: Actions) => {
     case "NEW_GAME":
       return { ...initialState };
     case "NEXT_LEVEL": {
-      const newColorObject = getRandomColorObj();
+      const newColorObject = getRandomColorArray();
       return {
         ...state,
-        randomColorObject: newColorObject,
+        randomColorArray: newColorObject,
         randomColor: getRandomColor(newColorObject),
         userColor: "",
       };
@@ -47,8 +47,8 @@ const reducer = (state: typeof initialState, action: Actions) => {
   }
 };
 
-const Colors: React.FC = () => {
-  const [{ userColor, userScore, randomColor, randomColorObject }, dispatch] =
+const ColorGame: React.FC = () => {
+  const [{ userColor, userScore, randomColor, randomColorArray }, dispatch] =
     useReducer(reducer, initialState);
 
   const handleUserGuess = (color: string) => {
@@ -66,17 +66,14 @@ const Colors: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center gap-y-7">
+    <div className="colorGameContainer">
       <div
         style={{ backgroundColor: randomColor }}
-        className="size-32 md:size-64"
+        className="colorBox"
         data-testid="colorBox"
       ></div>
       <span data-testid="score">Your score : {userScore}</span>
-      <span
-        className="text-center font-semibold text-xl md:text-2xl"
-        data-testid="gameInstructions"
-      >
+      <span className="gameInstructions" data-testid="gameInstructions">
         Guess the correct color!
       </span>
 
@@ -84,7 +81,7 @@ const Colors: React.FC = () => {
         userColor={userColor}
         randomColor={randomColor}
         handleUserGuess={handleUserGuess}
-        randomColorObject={randomColorObject}
+        colorArray={randomColorArray}
       />
 
       {userColor && (
@@ -101,4 +98,4 @@ const Colors: React.FC = () => {
   );
 };
 
-export default Colors;
+export default ColorGame;
