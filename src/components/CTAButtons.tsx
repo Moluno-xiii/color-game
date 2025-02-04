@@ -1,16 +1,8 @@
 interface Props {
   handleNewGame: () => void;
-  handleNextLevel: () => void;
-  userColor: string;
-  randomColor: string;
 }
 
-const CTAButtons: React.FC<Props> = ({
-  handleNewGame,
-  handleNextLevel,
-  userColor,
-  randomColor,
-}) => {
+const CTAButtons: React.FC<Props> = ({ handleNewGame }) => {
   return (
     <div className="cta-container ">
       <button
@@ -20,15 +12,6 @@ const CTAButtons: React.FC<Props> = ({
       >
         New game
       </button>
-      {userColor === randomColor && (
-        <button
-          data-testid="nextLevelButton"
-          className="cta-button"
-          onClick={() => handleNextLevel()}
-        >
-          Next level
-        </button>
-      )}
     </div>
   );
 };

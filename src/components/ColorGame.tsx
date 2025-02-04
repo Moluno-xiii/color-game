@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import { getRandomColor, getRandomColorArray } from "./utils";
 import CTAButtons from "./CTAButtons";
 import GameStatus from "./GameStatus";
@@ -35,11 +35,11 @@ const reducer = (state: typeof initialState, action: Actions) => {
     case "USER_GUESS": {
       if (!action.payload) return state;
       const guessedColor = action.payload;
-      const isCorrect = guessedColor === state.randomColor;
+      const isGuessCorrect = guessedColor === state.randomColor;
       return {
         ...state,
         userColor: guessedColor,
-        userScore: isCorrect ? state.userScore + 1 : state.userScore,
+        userScore: isGuessCorrect ? state.userScore + 1 : state.userScore,
       };
     }
     default:
@@ -53,17 +53,17 @@ const ColorGame: React.FC = () => {
 
   const handleUserGuess = (color: string) => {
     dispatch({ type: "USER_GUESS", payload: color });
-    console.log(userColor);
-    console.log(randomColor);
-  };
-
-  const handleNextLevel = () => {
-    dispatch({ type: "NEXT_LEVEL" });
   };
 
   const handleNewGame = () => {
     dispatch({ type: "NEW_GAME" });
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      dispatch({ type: "NEXT_LEVEL" });
+    }, 1000);
+  }, [userScore]);
 
   return (
     <div className="colorGameContainer">
@@ -88,12 +88,7 @@ const ColorGame: React.FC = () => {
         <GameStatus userColor={userColor} randomColor={randomColor} />
       )}
 
-      <CTAButtons
-        userColor={userColor}
-        randomColor={randomColor}
-        handleNewGame={handleNewGame}
-        handleNextLevel={handleNextLevel}
-      />
+      <CTAButtons handleNewGame={handleNewGame} />
     </div>
   );
 };
